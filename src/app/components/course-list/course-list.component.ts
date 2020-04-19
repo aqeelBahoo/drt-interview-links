@@ -23,7 +23,7 @@ export class CourseListComponent implements OnInit {
   }
 
   public search(value) {
-    this.rows = this.temRows.filter((item) => item.title.indexOf(value) !== -1);
+    this.rows = this.temRows.filter((item) => item.title.toLowerCase().indexOf(value.toLowerCase()) !== -1);
   }
 
 }
